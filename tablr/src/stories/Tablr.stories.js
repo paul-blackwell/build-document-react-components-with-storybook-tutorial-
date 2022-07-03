@@ -1,10 +1,13 @@
 import { Tablr } from "../Tablr";
 
 export default {
-  title: 'Tablr - A customizable React component',
+  title: 'Tablr - A customizable React table component',
   component: Tablr,
+  argTypes: {
+    rows: { control: '' },
+    headers: { control: '' }
+  },
 };
-
 
 const Template = args => <Tablr {...args}/>;
 
