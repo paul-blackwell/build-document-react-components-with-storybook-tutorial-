@@ -6,8 +6,16 @@ export default {
 };
 
 
-const Template = args => <Tablr />;
+const Template = args => <Tablr {...args}/>;
 
-export const Default = Template.bind({
+export const Default = Template.bind({});
 
-});
+Default.args = {
+  rows: [
+    ['This', 'is', 'just', 'a', 'test'],
+    ['This', 'is', 'also', 'a', 'test'],
+    ['Just', 'a', 'little', 'more', 'data'],
+    ['Row', 'number', 'four', 'right', 'here'],
+  ],
+  headers: ['Col 1', 'Col 2', 'Col 3', 'Col 4', 'Col 5'],
+};
